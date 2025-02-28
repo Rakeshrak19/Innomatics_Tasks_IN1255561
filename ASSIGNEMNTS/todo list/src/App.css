@@ -1,0 +1,144 @@
+/* Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Main Container */
+.container {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 380px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+/* Heading */
+h1 {
+  color: #5a189a;
+  font-size: 26px;
+}
+
+/* Input and Button */
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #5a189a;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #9d4edd;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Add Task Button */
+button.add-btn {
+  background: #5a189a;
+  color: white;
+}
+
+button.add-btn:hover {
+  background: #7b2cbf;
+}
+
+/* Task List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+/* Task Items */
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f3e8ff;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 8px;
+  transition: transform 0.3s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+/* Task Text */
+li span {
+  flex-grow: 1;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Task Buttons */
+button.edit-btn {
+  background: #ffcc00;
+  color: black;
+}
+
+button.edit-btn:hover {
+  background: #ffdb4d;
+}
+
+button.delete-btn {
+  background: #e63946;
+  color: white;
+}
+
+button.delete-btn:hover {
+  background: #ff6b6b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
